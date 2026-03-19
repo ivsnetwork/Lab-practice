@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch line",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "Build line",
+      "type": "cppdbg",
+      "program": "${workspaceFolder}/a.out"
+    }
+  ]
+}
