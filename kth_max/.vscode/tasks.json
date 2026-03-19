@@ -1,0 +1,73 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build add",
+      "type": "shell",
+      "command": "g++",
+      "args": [
+        "add.cpp"
+      ],
+      "osx": {
+        "args": [
+          "add.cpp",
+          "-g",
+          "-O0",
+          "-Wall",
+          "./lib/mac/libsprite.a",
+          "-I./include",
+          "-I/usr/X11/include",
+          "-L/usr/X11R6/lib",
+          "-lX11",
+          "-std=c++20"
+        ]
+      },
+      "linux": {
+        "args": [
+          "add.cpp",
+          "-g",
+          "-O0",
+          "-Wall",
+          "./lib/linux/libsprite.a",
+          "-I./include",
+          "-I/usr/include/X11",
+          "-L/usr/X11R6/lib",
+          "-lX11",
+          "-std=c++20"
+        ]
+      },
+      "group": "build",
+      "problemMatcher": "$gcc"
+    },
+    {
+      "label": "Run all add tests",
+      "type": "shell",
+      "dependsOn": "Build add",
+      "command": [
+        "passed=0; failed=0;",
+        "GREEN='\\033[0;32m'; RED='\\033[0;31m'; NC='\\033[0m';",
+        "for i in 1 2 3 4 5 6 7 8 9 10; do",
+        "  ./a.out < tests/test$i/input.txt > /tmp/add_out.txt;",
+        "  if diff -q /tmp/add_out.txt tests/test$i/output.txt > /dev/null; then",
+        "    echo -e \"===== Test $i (${GREEN}Passed${NC}) ====\";",
+        "    passed=$((passed+1));",
+        "  else",
+        "    echo -e \"===== Test $i (${RED}Failed${NC}) ====\";",
+        "    echo \"--- Expected Output ---\";",
+        "    cat tests/test$i/output.txt; echo;",
+        "    echo \"--- Your Output ---\";",
+        "    cat /tmp/add_out.txt; echo;",
+        "    failed=$((failed+1));",
+        "  fi;",
+        "done;",
+        "echo \"======================\";",
+        "echo -e \"${GREEN}Passed: $passed${NC}\";",
+        "echo -e \"${RED}Failed: $failed${NC}\";"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    }
+  ]
+}

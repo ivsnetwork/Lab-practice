@@ -1,0 +1,133 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch add (test1)",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "Build add",
+      "type": "cppdbg",
+      "program": "/bin/bash",
+      "args": [
+        "-c",
+        "./a.out < tests/test1/input.txt"
+      ]
+    },
+    {
+      "name": "Launch add (test2)",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "Build add",
+      "type": "cppdbg",
+      "program": "/bin/bash",
+      "args": [
+        "-c",
+        "./a.out < tests/test2/input.txt"
+      ]
+    },
+    {
+      "name": "Launch add (test3)",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "Build add",
+      "type": "cppdbg",
+      "program": "/bin/bash",
+      "args": [
+        "-c",
+        "./a.out < tests/test3/input.txt"
+      ]
+    },
+    {
+      "name": "Launch add (test4)",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "Build add",
+      "type": "cppdbg",
+      "program": "/bin/bash",
+      "args": [
+        "-c",
+        "./a.out < tests/test4/input.txt"
+      ]
+    },
+    {
+      "name": "Launch add (test5)",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "Build add",
+      "type": "cppdbg",
+      "program": "/bin/bash",
+      "args": [
+        "-c",
+        "./a.out < tests/test5/input.txt"
+      ]
+    },
+    {
+      "name": "Launch add (test6)",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "Build add",
+      "type": "cppdbg",
+      "program": "/bin/bash",
+      "args": [
+        "-c",
+        "./a.out < tests/test6/input.txt"
+      ]
+    },
+    {
+      "name": "Launch add (test7)",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "Build add",
+      "type": "cppdbg",
+      "program": "/bin/bash",
+      "args": [
+        "-c",
+        "./a.out < tests/test7/input.txt"
+      ]
+    },
+    {
+      "name": "Launch add (test8)",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "Build add",
+      "type": "cppdbg",
+      "program": "/bin/bash",
+      "args": [
+        "-c",
+        "./a.out < tests/test8/input.txt"
+      ]
+    },
+    {
+      "name": "Launch add (test9)",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "Build add",
+      "type": "cppdbg",
+      "program": "/bin/bash",
+      "args": [
+        "-c",
+        "./a.out < tests/test9/input.txt"
+      ]
+    },
+    {
+      "name": "Launch add (test10)",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "Build add",
+      "type": "cppdbg",
+      "program": "/bin/bash",
+      "args": [
+        "-c",
+        "./a.out < tests/test10/input.txt"
+      ]
+    },
+    {
+      "name": "Launch add (Custom Input)",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "Build add",
+      "type": "cppdbg",
+      "program": "${workspaceFolder}/a.out"
+    }
+  ]
+}

@@ -5,10 +5,10 @@ CXX = g++
 CXXFLAGS= -g -O0 -Wall ./lib/linux/libsprite.a -I./include -I/usr/include/X11 -L/usr/X11R6/lib -lX11 -std=c++20
 
 #--------------------------
-# Lab-00 : add
+# Lab-Practice : main
 #--------------------------
 
-add:
+main:
 	$(CXX) $@.cpp $(CXXFLAGS)
 
 clean:
